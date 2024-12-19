@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey it</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">We would love your feedback! Please fill out this form to help us improve.</p>
+    </header>
+
+    <main>
+        <form id="survey-form">
+            <!-- Name Input -->
+            <label id="name-label" for="name">Name:</label>
+            <input 
+                id="name" 
+                type="text" 
+                name="name" 
+                placeholder="Enter your name" 
+                required
+            >
+
+            <!-- Email Input -->
+            <label id="email-label" for="email">Email:</label>
+            <input 
+                id="email" 
+                type="email" 
+                name="email" 
+                placeholder="Enter your email" 
+                required
+            >
+
+            <!-- Number Input -->
+            <label id="number-label" for="number">Age:</label>
+            <input 
+                id="number" 
+                type="number" 
+                name="age" 
+                placeholder="Enter your age" 
+                min="10" 
+                max="100" 
+                required
+            >
+
+            <!-- Dropdown -->
+            <label for="dropdown">What is your role?</label>
+            <select id="dropdown" name="role">
+                <option value="student">Student</option>
+                <option value="professional">Professional</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Radio Buttons -->
+            <fieldset>
+                <legend>Would you recommend us?</legend>
+                <label>
+                    <input type="radio" name="recommend" value="yes" required> Yes
+                </label>
+                <label>
+                    <input type="radio" name="recommend" value="no"> No
+                </label>
+            </fieldset>
+
+            <!-- Checkboxes -->
+            <fieldset>
+                <legend>What topics are you interested in? (Select all that apply)</legend>
+                <label>
+                    <input type="checkbox" name="topics" value="web-development"> Web Development
+                </label>
+                <label>
+                    <input type="checkbox" name="topics" value="data-science"> Data Science
+                </label>
+                <label>
+                    <input type="checkbox" name="topics" value="ui-design"> UI/UX Design
+                </label>
+            </fieldset>
+
+            <!-- Textarea -->
+            <label for="comments">Additional Comments:</label>
+            <textarea 
+                id="comments" 
+                name="comments" 
+                rows="4" 
+                placeholder="Let us know your thoughts..."
+            ></textarea>
+
+            <!-- Submit Button -->
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
+
